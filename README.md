@@ -1,29 +1,72 @@
 # RTQA
 
-
-## 📖 Abstract
-Current temporal knowledge graph question answering (TKGQA) methods primarily focus on implicit temporal constraints, lacking the capability of handling more complex temporal queries, and struggle with limited reasoning abilities and error propagation in decomposition frameworks.  
-
-We propose **RTQA**, a novel framework to address these challenges by enhancing reasoning over TKGs **without requiring training**. Following recursive thinking, RTQA recursively decomposes questions into sub-problems, solves them bottom-up using LLMs and TKG knowledge, and employs **multi-path answer aggregation** to improve fault tolerance.  
-
-RTQA consists of three core components:
-- **Temporal Question Decomposer**  
-- **Recursive Solver**  
-- **Answer Aggregator**  
-
-Experiments on **MultiTQ** and **TimelineKGQA** benchmarks demonstrate significant Hits@1 improvements in *Multiple* and *Complex* categories, outperforming state-of-the-art methods.
-
----
-
-## 🔑 Main Idea
+## 🚀 Overview
 <p align="center">
   <img src="figure/main.png" alt="RTQA pipeline" width="700"/>
 </p>
 
+This repository contains the code and resources for the RTQA framework, as described in the paper: *[RTQA: Recursive Thinking for Complex Temporal Knowledge Graph Question Answering with Large Language Models](https://github.com/zjukg/RTQA)*.
 
----
+
+
+## 🛠️ Setting Up 
+
+
+```bash
+git clone https://github.com/zjukg/RTQA.git
+conda create -n RTQA python=3.9.21
+conda activate RTQA
+pip install -r requirements.txt
+```
+
+
+## 📊 Obtaining Datasets
+
+The RTQA framework uses the **MultiTQ** and **TimelineKGQA** datasets for evaluation. Below are instructions to download these datasets:
+
+### MultiTQ Dataset
+
+1. Visit the [https://github.com/czy1999/MultiTQ](https://github.com/czy1999/MultiTQ).
+
+```bash
+git clone https://github.com/czy1999/MultiTQ.git
+cd MultiTQ/data
+unzip Dataset.zip
+```
+
+2. Alternatively, download the dataset directly from Hugging Face:
+
+🤗Datasets Link: https://huggingface.co/datasets/chenziyang/MultiTQ
+
+### TimelineKGQA Dataset
+
+To download we generated two datasets based on ICEWS Actor and CronQuestions KG, please visit the following link: 🤗[TimelineKGQA Datasets](https://github.com/PascalSun/TimelineKGQA/tree/main/Datasets)
+
+```bash
+git clone https://github.com/PascalSun/TimelineKGQA.git
+cd Datasets
+```
+*Note*: The TimelineKGQA dataset is generated based on ICEWS Actor and CronQuestions KG. We only use the CronQuestions KG part.
+
+## 📕 Evaluation
+```bash
+cd MultiTQ/TimelineKGQA
+cd TemQuesDecom
+python 0_get_prompt.py
+phthon 1_query.py
+python 2_combine.py
+python 3_self_check.py
+python 4_postprocess.py
+phthon 5_postprocess_tree.py
+cd ../RecursiveSolver
+python 1_built_tree_time.py
+python 2_run.py
+python 3_get_f1.py
+```
+
+
 ## ✅ Todo List
 
 - [x] Our paper has been accepted to **EMNLP 2025 main** 🎉
-- [ ] Release the code and resources before **2025-09-30**
+- [x] Release the code and resources before **2025-09-30**
 
