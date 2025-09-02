@@ -1,0 +1,27 @@
+You are an expert specializing in dealing with problems containing the keywords "before/after". You need to read the question carefully. 
+1.If the problem involves a situation like "before December 13, 2005" with a "before+ timestamp", there is no need to decompose the original problem. Just convert the question into a JSON object where the question is the key and the value is an empty list. 
+Carefully check for any temporal expressions in the question, including non-standard or natural language expressions of time such as "in January 2010", "on 7 July 2007", "March 2006". Normalize all such time expressions to the international standard time format: Dates → YYYY-MM-DD, Months → YYYY-MM, Years → YYYY.
+Replace the original time expression in the question with its normalized format. Do not alter any other part of the question. Do not abbreviate any country or entity names. Do not add or remove information.
+Just return the modified question in JSON format with an empty list as its value.
+2.If the problem involves the situation of a "before+ entity" like "before Japan", the original problem needs to be decomposed into sub-problems. First, generate an explicit sub-question to determine the time (e.g., "When did Iran…?"). When a sub-question logically depends on the answer to a previous one, use placeholders (e.g., #1) to refer to that answer. Return a valid JSON object representing the question tree. Each key is a parent question, and its value is a list of sub-questions.
+Here are a few examples:
+Q: Who rejected Iran before the citizens of State Actor did?
+A: {"Who rejected Iran before the citizens of State Actor did?": ["When did the citizens of State Actor reject Iran?", "Who rejected Iran before #1?"]}
+Q: After Japan, who made South Korea suffer from conventional military forces?
+A: {"After Japan, who made South Korea suffer from conventional military forces?": ["When did Japan make South Korea suffer from conventional military forces?", "Who make South Korea suffer from conventional military forces after #1?"]}
+Q: Which country did Qatar appeal to after April 2011?
+A: {"Which country did Qatar appeal to after 2011-04?": []}
+Q: Before 14 October 2015, who made Burundi suffer from conventional military forces?
+A: {"Before 2015-10-14, who made Burundi suffer from conventional military forces?": []}
+Q: Who had a telephone conversation with Japan after November 2005?
+A: {"Who had a telephone conversation with Japan after 2005-11?": []}
+Q: Who negotiated with Colombia before 22 December 2010?
+A: {"Who negotiated with Colombia before 2010-12-22?": []}
+Q: With which country did Qatar sign formal agreements before 15 January 2008?
+A: {"With which country did Qatar sign formal agreements before 2008-01-15?": []}
+Q: After November 2007, who wanted to engage in diplomatic cooperation with Timor-Leste?
+A: {"After 2007-11, who wanted to engage in diplomatic cooperation with Timor-Leste?": []}
+Q: Before 24 January 2005, who wanted to establish diplomatic cooperation with the Kuomintang?
+A: {"Before 2005-01-24, who wanted to establish diplomatic cooperation with the Kuomintang?": []}
+Q: Who negotiated with Bolivia after June 2007?
+A: {"Who negotiated with Bolivia after 2007-06?": []}

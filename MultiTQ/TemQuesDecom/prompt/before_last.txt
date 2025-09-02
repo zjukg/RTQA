@@ -1,0 +1,19 @@
+You are an expert in problem decomposition. Every problem needs to be decomposed into three sub-problems. Please generate a hierarchical question decomposition tree (HQDT) with json format for a given question. In this tree, the root node is the original complex question, and each non-root node is a sub-question of its parent. Return a valid JSON object representing the question tree. Each key is a parent question, and its value is a list of sub-questions.
+First, when encountering a "before+ event", it is necessary to extract the implicit time first and ask clearly "when did xxx..." . 
+It is noted that the original problem also has a time constraint of "last", which involves the chronological order. The second sub-problem asks for all the events that satisfy the problem information under the time constraint before #1. 
+Then the third sub-question asks "last one" to return these events.
+
+Here are a few examples:
+Q: Which country was the last to express optimism about the leader of Ukraine, before Iran?
+A: {"Which country was the last to express optimism about the leader of Ukraine, before Iran?": ["When did Iran express optimism about the leader of Ukraine?", "Which country expressed optimism about the leader of Ukraine before #1?", "which country was the last one among them?"]}
+Q: Before France, who last wished to meet with Nuri al-Maliki?
+A: {"Before France, who last wished to meet with Nuri al-Maliki?": ["when did France wish to meet with Nuri al-Maliki?", "before #1, who wished to meet with Nuri al-Maliki?", "who was the last one among them?"]}
+Q: Before Tony Blair, which country last did France decline?
+A: {"Before Tony Blair, which country last did France decline?": ["when did France decline Tony Blair?", "before #1,which country did France decline?", "which country was the last one among them?"]}
+Q: Who was the last country to be attacked with small arms and light weapons by the Brazilian military before Colombia?
+A: {"Who was the last country to be attacked with small arms and light weapons by the Brazilian military before Colombia?": ["when did Colombia be attacked with small arms and light weapons  by the Brazilian military?", "which country be attacked with small arms and light weapons by the Brazilian military before #1?", "who was the last one among them?"]}
+Q: Who was the last person Winston Peters wanted to meet before Timor-Leste?
+A: {"Who was the last person Winston Peters wanted to meet before Timor-Leste?": ["when did Winston Peters meet Timor-Leste?", "who Winston Peters wanted to meet before #1?", "who was the last person among them?"]}
+Q: Before Ali Muhammad Mujawar, which country last recommended Japan?
+A: {"Before Ali Muhammad Mujawar, which country last recommended Japan?": ["when did Ali Muhammad Mujawar recommend Japan?", "before #1,which country recommended Japan?", "which country was the last one among them?"]}
+

@@ -1,0 +1,55 @@
+Please answer the given question based on the given Q&A context and your knowledge. After completing the reasoning, summarize your final answer clearly in the following format: So the answer is: <final concise answer>.
+If the question asks for a specific month (e.g., "Which month", "In what month", "the exact month", etc.), then return the answer in "yyyy-mm" format, including the year and the month.
+If the question asks for a specific date (e.g., contains keywords like "When", "What day", "the exact date", etc.), return the answer in "yyyy-mm-dd" format.
+If the question asks for a set of entities (e.g., languages, people, countries, places, organizations), and multiple sources in the context (or your own knowledge) offer valid answers, return the union of all correct, non-duplicate entities. Do not return partial names (e.g., only names inside parentheses); always return the full, explicit name of each entity.
+
+Question: Which languages are recognized as the official ones in the nation where Trelawny Parish is located?
+Context: 
+Which nation is Trelawny Parish located in? -- Jamaica
+What are the official languages of Jamaica? -- Jamaican English
+Answer: Trelawny Parish is located in Jamaica, and the official language of Jamaica is Jamaican English. So the answer is: Jamaican English.
+
+Question: Where does the actor who played Beatrice Bell live currently?
+Context: 
+Who is the actor that played Beatrice Bell? -- Avril Lavigne
+Where does Avril Lavigne live? -- The answer is not provided by the given knowledge triplets. However, based on my knowledge, Avril Lavigne's current place of residence is unknown as he keeps his personal life quite private.
+Answer: The given references don't lead to an answer to the question, only that Avril Lavigne is the actor who played Beatrice Bell. But based on my knowledge, Avril Lavigne lives in Greater Napanee and Belleville. So the answer is: Greater Napanee; Belleville.
+
+Question: Who knows the art style created by the artist that produced the Hospital in Arles produce?
+Context: 
+Who is the artist that produced the Hospital in Arles? -- Vincent van Gogh
+What is the art style created by Vincent van Gogh? -- Post-Impressionism
+Who knows (Post-Impressionism)? -- Vincent van Gogh
+Answer: The artist that produced the Hospital in Arles is Vincent van Gogh, and the art style he created is Post-Impressionism. So the answer is: Post-Impressionism.
+
+Question: What countries in South American had the CO2 emissions per capita of 2009 metric ton?
+Context: 
+What are the countries in South American? -- Empire of Brazil, Brazil, Peru, Colombia, Uruguay, Venezuela, Argentina, Bolivia
+Among the countries in ([#1]), which had the CO2 emissions per capita of 2009 metric ton? -- Brazil, Uruguay, Venezuela
+Answer: Based on the references, among the South American countries, Brazil, Uruguay, and Venezuela had the CO2 emissions per capita of 2009 metric ton. So the answer is: Brazil; Uruguay; Venezuela.
+
+Question: What should be done with kids in the location where the Phoenix New Times newspaper is circulated?
+Context: 
+Where is the Phoenix New Times newspaper circulated? -- Phoenix
+What are the tourist attractions in Phoenix? -- Phoenix Art Museum
+What activities or events can be held in Phoenix Art Museum? -- Phoenix Art Museum offers art exhibitions, workshops, lectures, film screenings, family activities, live performances, and special events.
+Answer: Based on the references, the Phoenix New Times newspaper is circulated in Phoenix, and kids can go to the Phoenix Art Museum. So the answer is: Phoenix Art Museum.
+
+Question: What team that won 1995 AFC Championship and once had Jim Harbaugh on its roster?
+Context: 
+What team won the 1995 AFC Championship? -- San Diego Chargers
+What team once had Jim Harbaugh on its roster? -- Indianapolis Colts and San Diego Chargers
+What is the intersection of set (San Diego Chargers) and set (Indianapolis Colts and San Diego Chargers)? -- San Diego Chargers
+Answer: Based on the references, the team that satisfies both "won the 1995 AFC Championship" and "had Jim Harbaugh on its roster" is San Diego Chargers. So the answer is: San Diego Chargers.
+
+Question: When did the director of film Hypocrite (Film) die?
+Context: 
+Who is the director of film Hypocrite? -- Miguel Morayta.
+When did Miguel Morayta die? -- 2013-06-19.
+Answer: The film Hypocrite was directed by Miguel Morayta. Miguel Morayta died on 19 June 2013. So the answer is: 2013-06-19.
+
+Question: Which film has the director born first, Two Weeks With Pay or Chhailla Babu?
+Context:
+When was the director of film Two Weeks With Pay born? -- 1919-11-28.
+When was the director of film Chhailla Babu born? -- 1939-02-24.
+Answer: The director of Two Weeks With Pay was born on November 28, 1919. The director of Chhailla Babu With Pay was born on 24 February 1939. Thus, Two Weeks With Pay has the director born first. So the answer is: Two Weeks With Pay.

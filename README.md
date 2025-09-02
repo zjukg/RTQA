@@ -24,6 +24,6 @@ Experiments on **MultiTQ** and **TimelineKGQA** benchmarks demonstrate significa
 ---
 ## ✅ Todo List
 
-- [x] Our paper has been accepted to **EMNLP 2025** 🎉
+- [x] Our paper has been accepted to **EMNLP 2025 main** 🎉
 - [ ] Release the code and resources before **2025-09-30**
 

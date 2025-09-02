@@ -1,0 +1,6 @@
+Convert the following question into a JSON object where the question is the key and the value is an empty list. Do not include any explanation or extra text. Just return the JSON.
+Here are a few examples:
+Q: When did Iran praise South Africa for the first time?
+A: {"When did Iran praise South Africa for the first time?": []}
+Q: When was the last time Hashim Tha\u00e7i spoke optimistically about Japan?
+A: {"When was the last time Hashim Tha\u00e7i spoke optimistically about Japan?": []}

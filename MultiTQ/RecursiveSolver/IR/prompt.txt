@@ -1,0 +1,63 @@
+Based on the historical facts, please answer the given question clearly in the following format: ...So the answer is: <final concise answer>.
+If the question asks for a specific year (e.g., "Which year", "In which year", "the exact year", etc.), then return the answer in "yyyy" format. Just return the most appropriate timestamp as the answer.
+If the question asks for a specific month (e.g., "Which month", "In what month", "the exact month", etc.), then return the answer in "yyyy-mm" format, including the year and the month. Just return the most appropriate timestamp as the answer.
+If the question asks for a specific date (e.g., contains keywords like "When", "What day", "the exact date", etc.), return the answer in "yyyy-mm-dd" format. Just return the most appropriate timestamp as the answer.
+If the question asks for a set of entities (e.g., contains keywords like "who", "which country", etc.), and multiple sources in the context offer valid answers, return the union of all correct, non-duplicate entities and attached timestamp in a list format. Do not return partial names (e.g., only names inside parentheses); always return the full, explicit name of each entity along with timestamps.
+Note that historical facts should be retrieved based on the full name of the entity and exact name of ralation rather than its abbreviation. For example, "Business (South Korea)" cannot be equated with "South Korea","appeal or request" cannot be equated with "consult".Be sure to find the information that is most semantically relevant。
+When the problem involves before a certain time or after a certain time, the answer should look for information including that date.
+Here are a few examples:
+Historical facts:
+Barack Obama Reject Party Member (United Kingdom) 2008-09-23.
+Barack Obama Reject Party Member (United Kingdom) 2008-09-23.
+Barack Obama Make statement Party Member (United Kingdom) 2008-11-08.
+Barack Obama Make statement Party Member (United Kingdom) 2008-11-08.
+Barack Obama Express intent to meet or negotiate Party Member (United Kingdom) 2009-03-10.
+Zawahiri Reject Barack Obama 2009-08-04.
+Question: in which year did barack obama reject the party member of united kingdom?
+Answer: The rejection event occurred on 2008-09-23, so the year is 2008. So the answer is: 2008.
+
+Historical facts:
+Citizen (Africa) Express intent to engage in diplomatic cooperation (such as policy support) Vietnam 2012-09-04.
+Vietnam Express intent to engage in diplomatic cooperation (such as policy support) African Union 2008-07-10.
+Vietnam Express intent to engage in diplomatic cooperation (such as policy support) African Union 2008-07-28.
+Vietnam Express intent to engage in diplomatic cooperation (such as policy support) African Union 2008-07-24.
+Vietnam Engage in diplomatic cooperation South Africa 2008-10-27.
+Vietnam Engage in diplomatic cooperation South Africa 2005-09-02.
+Question: When did the citizens of africa express their intention to establish diplomatic cooperation with vietnam?
+Answer: From the historical facts: Citizen (Africa) Express intent to engage in diplomatic cooperation (such as policy support) Vietnam 2012-09-04. This matches exactly what the question asks: citizens of Africa expressing intent toward diplomatic cooperation with Vietnam. So the answer is: 2012-09-04.
+
+       
+Historical facts:
+Media Personnel (Somalia) Praise or endorse Cabinet / Council of Ministers / Advisors (Somalia) 2012-11-27.
+Media Personnel (Somalia) Praise or endorse Cabinet / Council of Ministers / Advisors (Somalia) 2015-01-12.
+Media Personnel (Somalia) Make statement African Union 2007-10-08.
+Media Personnel (Somalia) Make statement African Union 2007-01-17.
+Media Personnel (Somalia) Make statement African Union 2012-11-18.
+Cabinet / Council of Ministers / Advisors (Somalia) Praise or endorse Media Personnel (Somalia) 2011-11-28.
+Media Personnel (Somalia) Make statement African Union 2007-06-15.
+Question: When did somalia's media personnel first commend somalia's council of ministers?
+Answer: We are asked to find the first time Somalia's media personnel commended (i.e., praised or endorsed) Somalia's Cabinet / Council of Ministers / Advisors. From the historical facts: Media Personnel (Somalia) Praise or endorse Cabinet / Council of Ministers / Advisors (Somalia) on: 2012-11-27 and 2015-01-12. Among these, the earliest instance is 2012-11-27. So the answer is: 2012-11-27.
+         
+Historical facts:
+Agence France-Presse Demand China in 2010-05-26.
+Agence France-Presse Make an appeal or request China in 2007-01-08.
+China Appeal for military aid Agence France-Presse in 2008-03-26.
+France Make an appeal or request China in 2012-06-05.
+France Demand China in 2008-06-11.
+Question: Could you tell me the exact month when Agence France-Presse appealed to China?
+Answer: So the answer is: 2007-01
+
+Historical facts:
+China Make a visit Malaysia in 2007-01-14.
+Malaysia Host a visit China in 2007-01-14.
+Malaysia Host a visit Pervez Musharraf in 2007-01-31.
+Association of Southeast Asian Nations Make a visit Malaysia in 2007-01-14.
+Thailand Host a visit Malaysia in 2007-02-14.\nChina Make a visit Malaysia in 2007-01-26.
+Malaysia Host a visit Pervez Musharraf in 2007-01-30.
+Malaysia Host a visit Mswati III in 2007-08-14.
+Malaysia Host a visit Pervez Musharraf in 2007-02-01.
+Malaysia Host a visit China in 2007-01-26.
+Pervez Musharraf Make a visit Malaysia in 2007-01-31.
+Malaysia Host a visit Association of Southeast Asian Nations in 2007-01-14.
+Question: Who visited Malaysia on 14 January 2007?
+Answer: From the historical facts, it is clear that China made a visit to Malaysia on 2007-01-14. So the answer is: ["China 2007-01-14", "Association of Southeast Asian Nations 2007-01-14"].

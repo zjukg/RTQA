@@ -1,0 +1,28 @@
+You are an expert in problem decomposition. Every problem needs to be decomposed into sub-problems. Please generate a hierarchical question decomposition tree (HQDT) with json format for a given question. In this tree, the root node is the original complex question, and each non-root node is a sub-question of its parent. Return a valid JSON object representing the question tree. Each key is a parent question, and its value is a list of sub-questions.
+the following is a discussion on different situations. 
+If the problem contains "in the same year/month to xxx", the time "when xxx occurred" should be asked first, "which year did xxx..." Or "which month did xxx..." Specifically, the granularity of year/month is determined based on the problem. When a sub-question logically depends on the answer to a previous one, use placeholders (e.g., #1) to refer to that answer.
+If the problem contains a situation similar to "first/last in 2005", a sub-problem should be broken down first to ask which events occurred in 2005, and then the second sub-problem is to ask which one occurred the earliest and the latest among these events. do not use placeholders : The answer to the previous sub-question is a set of entities (e.g., multiple people or countries), And these entities cannot be directly embedded into the next question. In such cases, phrase the next question using expressions like "among them" or "which of them" to indicate selection.
+
+Here are a few examples:
+Q: Who was the first to request a meeting with Togo in 2005?
+A: {"Who was the first to request a meeting with Togo in 2005?": ["Who requested a meeting with Togo in 2005?", "Who among them made the first request?"]}
+Q: Which country last praised Iran in 2009?
+A: {"Which country last praised Iran in 2009?": ["Which country praised Iran in 2009?", "Which country among them praised Iran at the latest date?"]}
+Q: Who hosted the visit of Abdelkader Messahel to Mauritania in the same year?
+A: {"Who hosted the visit of Abdelkader Messahel to Mauritania in the same year?": ["Which year did Abdelkader Messahel visit Mauritania?", "Who hosted the visit of Abdelkader Messahel to Mauritania in #1?"]}
+Q: Who was the first country to sign formal agreements with Iran in 2007?
+A: {"Who was the first country to sign formal agreements with Iran in 2007?": ["Which country sign formal agreements with Iran in 2007?", "who was the first country among them?"]}
+Q: Who praised Iran in the same month as Nacer Mehal?
+A: {"Who praised Iran in the same month as Nacer Mehal?": ["which month did Nacer Mehal praise Iran?", "who praised Iran in #1?"]}
+Q: Who did Iran give the criticism of the Muslims of Bahrain in the same month?
+A: {"Who did Iran give the criticism of the Muslims of Bahrain in the same month?": ["Which month did Iran give the criticism of the Muslims of Bahrain?", "who did Iran give criticism of in #1?"]}
+Q: Which country did the envoy of Sudan want to meet on the same day of Qatar?
+A: {"Which country did the envoy of Sudan want to meet on the same day of Qatar?": ["when did the envoy of Sudan meet Qatar?", "Which country did the envoy of Sudan want to meet on #1?"]}
+Q: Which country did Colombia negotiate with in the same year as Japan?
+A: {"Which country did Colombia negotiate with in the same year as Japan?": ["which year did Colombia negotiate with Japan?", "which country did Colombia negotiate with in #1?"]}
+Q: Who made an appeal to Iran on the same day as Xi Jinping?
+A: {"Who made an appeal to Iran on the same day as Xi Jinping?": ["when did Xi Jinping make an appeal to Iran?", "who made an appeal to Iran on #1?"]}
+Q: With which country did Guatemala last express its willingness to negotiate in 2006?
+A: {"With which country did Guatemala last express its willingness to negotiate in 2006?": ["with which country did Guatemala express its willingness to negotiate in 2006?", "which country was the last one among them?"]}
+Q: In 2010, which country was the last to sign formal agreements with Mauritania?
+A: {"In 2010, which country was the last to sign formal agreements with Mauritania?": ["in 2010, which country signed formal agreements with Mauritania?", "which country was the last one among them?"]}

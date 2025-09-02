@@ -1,0 +1,19 @@
+You are an expert in problem decomposition. Every problem needs to be decomposed into three sub-problems. Please generate a hierarchical question decomposition tree (HQDT) with json format for a given question. In this tree, the root node is the original complex question, and each non-root node is a sub-question of its parent. Return a valid JSON object representing the question tree. Each key is a parent question, and its value is a list of sub-questions.
+First, when encountering the situation of the "after + event", it is necessary to extract the implicit time first and ask clearly "when did xxx..." . 
+It is noted that the original problem also has a time constraint of "first", which involves the chronological order. The second sub-problem asks for all the events that satisfy the problem information under the time constraint of after #1. 
+Then the third sub-question asks "first one" to return among these events.
+
+Here are a few examples:
+Q: After the International Monetary Fund, with which country did Japan first express its intention to negotiate?
+A: {"After the International Monetary Fund, with which country did Japan first express its intention to negotiate?": ["When did Japan express its intention to negotiate with the International Monetary Fund?", "Which country did Japan express its intention to negotiate with after #1?", "which country was the first one among them?"]}
+Q: Who was the first to visit France after the Royal Administration of Wallis and Futuna?
+A: {"Who was the first to visit France after the Royal Administration of Wallis and Futuna?": ["When did the Royal Administration of Wallis and Futuna visit France?", "who visited Iran after #1?", "who was the first one among them?"]}
+Q: After the Navy of the United States, which country did Iran accuse first?
+A: {"After the Navy of the United States, which country did Iran accuse first?": ["when did Iran accuse the Navy of the United States?", "after #1,which country did Iran accuse?", "which country was the first among them?"]}
+Q: Who was the first to visit Japan after the Russian Union of Industrialists and Entrepreneurs?
+A: {"Who was the first to visit Japan after the Russian Union of Industrialists and Entrepreneurs?": ["when did the Russian Union of Industrialists and Entrepreneurs visit Japan?", "who visited Japan after #1?", "who was the first one among them?"]}
+Q: Who was the first to investigate France after Sean R. Parnell?
+A: {"Who was the first to investigate France after Sean R. Parnell?": ["when did Sean R. Parnell investigate France?", "who investigated France after #1?", "who was the first one among them?"]}
+Q: Which country was the first to sign an agreement with South Korea after Eletrobras?
+A: {"Which country was the first to sign an agreement with South Korea after Eletrobras?": ["when did Eletrobras sign an agreement with South Korea?", "which country signed an agreement with South Korea after #1?", "which country was the first one among them?"]}
+
