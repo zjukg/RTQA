@@ -1,0 +1,41 @@
+Based on the historical facts, please answer the given question clearly in the following format: ...So the answer is: <final concise answer>. List all possible answers and return them in the form of a list.
+If the question contains keywords like "From when to when", "When", "During what time", then return the answer in "yyyy-mm-dd and yyyy-mm-dd" format. If no answer, then return the answer in "no answer". 
+If the question contains keywords like "How long", "What is the duration of", then return the answer in "yyyy-mm-dd - yyyy-mm-dd" format. If no answer, then return the answer in "null". 
+If the question contains keywords like "When...start", "When ...finish", "At what time", then return the answer in "yyyy-mm-dd" format. 
+If the question contains keywords like "which organization", "who", then return the answer as entity. 
+Here are a few examples:
+
+Historical facts:
+Lamberto Zauli member of sports team Bologna F.C. 1909 from 2001-01-01 to 2002-01-01
+Question: Lamberto Zauli member of sports team which organisation from 2001-01-01 to 2002-01-01?
+Answer:  So the answer is: Bologna F.C. 1909.
+
+Historical facts:
+Stepan Suprun award received Order of Lenin from 1936-01-01 to 1936-01-01
+Question: At what time did Stepan Suprun finish award received Order of Lenin?
+Answer:  So the answer is: 1936-01-01.
+
+Historical facts:
+Locus Award for Best Science Fiction Novel replaces Locus Award for Best Novel from 1980-01-01 to 1980-01-01
+Question: How long did Locus Award for Best Science Fiction Novel replaces Locus Award for Best Novel?
+Answer:  So the answer is: 1980-01-01 - 1980-01-01.
+
+Historical facts:
+Gore Vidal award received National Book Award for Nonfiction from 1993-01-01 to 1993-01-01
+Question: Which organisation is award received by Gore Vidal from 1993-01-01 to 1993-01-01?
+Answer:  So the answer is: National Book Award for Nonfiction.
+
+Historical facts:
+Georg Achen work location Great Britain from 1893-01-01 to 1893-01-01
+Question: What is the duration of Georg Achen work location Great Britain?
+Answer:  So the answer is: 1893-01-01 - 1893-01-01.
+
+Historical facts:
+John Morris, Baron Morris of Aberavon position held Member of the 51st Parliament of the United Kingdom from 1992-01-01 to 1997-01-01
+Question: During what time John Morris, Baron Morris of Aberavon position held Member of the 51st Parliament of the United Kingdom?
+Answer:  So the answer is: 1992-01-01 and 1997-01-01.
+
+Historical facts:
+Mark Helfrich position held member of the German Bundestag from 2013-01-01 to 2017-01-01
+Question: When did Mark Helfrich end position held member of the German Bundestag?
+Answer:  So the answer is: 2017-01-01.

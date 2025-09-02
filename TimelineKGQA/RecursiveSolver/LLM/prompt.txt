@@ -1,0 +1,34 @@
+Please reason carefully step-by-step based on temporal information. After completing the reasoning, summarize your final answer clearly: So the answer is: <final concise answer>.
+Examples:
+Q: Who was the president of the USA before the COVID-19 pandemic began?
+A: The COVID-19 pandemic officially began around March 2020. The president of the USA before March 2020 was Donald Trump. So the answer is: Donald Trump.
+Q: Who was the CEO of Microsoft when Windows XP was released?
+A: Windows XP was released on October 25, 2001. At that time, the CEO of Microsoft was Steve Ballmer. So the answer is: Steve Ballmer.
+Q: Which company was founded first, Google or Facebook?
+A: Google was founded on September 4, 1998. Facebook was founded on February 4, 2004. 1998 is earlier than 2004. So the answer is: Google.
+Q: Who was the monarch of England during the construction of Big Ben?
+A: Big Ben’s construction started in 1843 and completed in 1859. Queen Victoria reigned from 1837 to 1901. Thus, during the construction of Big Ben, Queen Victoria was the monarch. So the answer is: Queen Victoria.
+Q: Who won the Nobel Peace Prize in the year when Berlin Wall fell?
+A: The Berlin Wall fell in 1989. The Nobel Peace Prize winner in 1989 was the 14th Dalai Lama. So the answer is: the 14th Dalai Lama.
+Q: When was the album What'S Inside released?
+A: What's Inside was released in the year 1995. So the answer is: 1995.
+Q: When did the director of film Hypocrite (Film) die?
+A: The film Hypocrite was directed by Miguel Morayta. Miguel Morayta died on 19 June 2013. So the answer is: 19 June 2013.
+Q: Who was born first out of Martin Hodge and Ivania Martinich?
+A: Martin Hodge was born on 4 February 1959. Ivania Martinich was born on 25 July 1995. Thus, Martin Hodge was born first. So the answer is: Martin Hodge.
+Q: When was the director of film P.S. Jerusalem born?
+A: P.S. Jerusalem was directed by Danae Elon. Danae Elon was born on December 23, 1970. So the answer is: December 23, 1970.
+Q: Who was the president of the USA during the 9/11 attacks?
+A: The 9/11 attacks occurred on September 11, 2001. The president of the USA at that time was George W. Bush. So the answer is: George W. Bush.
+Q: Which city hosted the Summer Olympics earlier: Beijing or Tokyo?
+A: Beijing hosted the Summer Olympics in 2008. Tokyo hosted the Summer Olympics in 2021. 2008 is earlier than 2021. So the answer is: Beijing.
+Q: who was the wife of king edward vii?
+A: King Edward VII was married to Alexandra of Denmark. So the answer is: Alexandra of Denmark.
+Q: Which languages are recognized as the official ones in the nation where Trelawny Parish is located?
+A: Trelawny Parish is located in Jamaica, and the official language in Jamaica is Jamaican English. So the answer is: Jamaican English.
+Q: what position did john stockton play?
+A: John Stockton was an American professional basketball player, and he played as a Point guard. So the answer is: Point guard.
+Q: Which celebrities who dated Kim Khardashian have appeared on television after June 23, 2009?
+A: The celebrities who dated Kim Khardashian are Reggie Bush, Ray J, Nick Cannon, Joe Francis, Nick Lachey, and Ben Roethlisberger. Among these people, Nick Cannon appeared on TV at January 1, 2012, Nick Lachey appeared on TV at June 25, 2013 and December 14, 2009. Both of them have appeared on TV after June 23, 2009. So the answer is: Nick Cannon, Nick Lachey.
+
+

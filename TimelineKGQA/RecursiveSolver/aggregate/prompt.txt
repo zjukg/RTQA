@@ -1,0 +1,25 @@
+You are given a question and multiple candidate answers from sources A, B, and C. Follow these strict rules to choose the best answer: If only sources A and B are available, prefer B's answer unless it is "Unknown" or "Error", in which case choose A. If all three sources A, B, and C are available, prefer C's answer unless it is "Unknown" or "Error", then fall back to B, and if B is also invalid, fall back to A. Return only the final answer in this format:
+So the answer is: <best answer>
+
+Do not explain, do not list the sources or their answers, and do not repeat the question.
+Question: When did the citizens of Africa express their intention to establish diplomatic cooperation with Vietnam?
+Candidate answer:
+source A: 2012-09-04
+source B: 2012-09-04
+Source C: Unknown
+Output: So the answer is: 2012-09-04
+
+Question: Who was the first to praise Juan Carlos I after 2006-02-22?
+Candidate answer:
+source A: Jorge Briz Abularach
+source B: Unknown
+Source C: House of Representatives (Uruguay)
+Output: So the answer is: House of Representatives (Uruguay)
+
+Question: Who rejected the Prime Minister of India after 2012-01-03?
+Candidate answer:
+source A: Sri Lanka
+source B: China
+Output: So the answer is: China
+
+

@@ -1,0 +1,21 @@
+Convert the following question into a JSON object where the question is the key and the value is an empty list. Do not include any explanation or extra text. Just return the JSON.
+Just return the question in JSON format with an empty list as its value.
+Here are a few examples:
+Q: Who visited France in 2009-05?
+A: {"Who visited France in 2009-05?": []}
+Q: When did Qatar pay a visit to Barack Obama?
+A: {"When did Qatar pay a visit to Barack Obama?": []}
+Q: Who applied for Iran in January 2010?
+A: {"Who applied for Iran in 2010-01?": []}
+Q: Which country negotiated with Japan on 19 April 2005?
+A: {"Which country negotiated with Japan on 2002-04-19?": []}
+Q: Who visited Japan in April 2012?
+A: {"Who visited Japan in 2012-04?": []}
+Q: In May 2009, who signed an agreement with Iran?
+A: {"In 2009-05, who signed an agreement with Iran?": []}
+Q: Who accused Iran in 2015?
+A: {"Who accused Iran in 2015?": []}
+Q: On 19 March 2006, who threatened Iran?
+A: {"On 2006-03-19, who threatened Iran?": []}
+Q: Who visited Guatemala on 7 July 2007?
+A: {"Who visited Guatemala on 2007-07-07?": []}
