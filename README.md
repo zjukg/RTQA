@@ -45,7 +45,7 @@ unzip Dataset.zip
 
 ### TimelineKGQA Dataset
 
-To download we generated two datasets based on ICEWS Actor and CronQuestions KG, please visit the following link: 🤗[TimelineKGQA Datasets](https://github.com/PascalSun/TimelineKGQA/tree/main/Datasets)
+Visit the [https://github.com/PascalSun/TimelineKGQA/tree/main/Datasets](https://github.com/PascalSun/TimelineKGQA/tree/main/Datasets)
 
 ```bash
 git clone https://github.com/PascalSun/TimelineKGQA.git
