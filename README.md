@@ -5,8 +5,13 @@
   <img src="figure/main.png" alt="RTQA pipeline" width="700"/>
 </p>
 
-This repository contains the code and resources for the RTQA framework, as described in the paper: *[RTQA: Recursive Thinking for Complex Temporal Knowledge Graph Question Answering with Large Language Models](https://github.com/zjukg/RTQA)*.
+This repository contains the code and resources for the RTQA framework, as described in the paper: *[RTQA: Recursive Thinking for Complex Temporal Knowledge Graph Question Answering with Large Language Models](https://arxiv.org/abs/2509.03995)*.
 
+
+## 🔔 News
+- [x] Our paper has been accepted to **EMNLP 2025 main** 🎉
+- [x] Release the code and resources before **2025-09-30**
+- [x] Our paper is released on arxiv ! 
 
 
 ## 🛠️ Setting Up 
@@ -64,9 +69,17 @@ python 2_run.py
 python 3_get_f1.py
 ```
 
+## 🤝 Cite:
+Please consider citing this paper if you find our work useful.
 
-## ✅ Todo List
-
-- [x] Our paper has been accepted to **EMNLP 2025 main** 🎉
-- [x] Release the code and resources before **2025-09-30**
-
+```bash
+@misc{gong2025rtqarecursivethinking,
+      title={RTQA : Recursive Thinking for Complex Temporal Knowledge Graph Question Answering with Large Language Models}, 
+      author={Zhaoyan Gong and Juan Li and Zhiqiang Liu and Lei Liang and Huajun Chen and Wen Zhang},
+      year={2025},
+      eprint={2509.03995},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.03995}, 
+}
+```
