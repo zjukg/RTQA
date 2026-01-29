@@ -21,7 +21,10 @@ This repository contains the code and resources for the RTQA framework, as descr
 git clone https://github.com/zjukg/RTQA.git
 conda create -n RTQA python=3.9.21
 conda activate RTQA
+pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0
 pip install -r requirements.txt
+conda install -c pytorch -c nvidia faiss-gpu=1.7.2
+(We recommend installing faiss-gpu via conda.)
 ```
 
 
