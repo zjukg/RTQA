@@ -37,7 +37,7 @@ def query(rank, prompts,api_key, base_url):
     queries = prompts[start:end]
     #queries = prompts[int(len(prompts) * rank / MAX_SPLIT) : int(len(prompts) * (rank + 1) / MAX_SPLIT)]
     try:
-        with open(f'outputs_100/rank_{rank}.json', 'w') as fout:
+        with open(f'outputs_full/rank_{rank}.json', 'w') as fout:
             if rank == 0:
                 bar = tqdm(range((len(queries) + STEP - 1) // STEP))
             else:
@@ -68,8 +68,8 @@ def query(rank, prompts,api_key, base_url):
 
 if __name__=='__main__':
     atexit.register(cleanup)
-    prompts = json.load(open('prompts_100.json'))
-    output_dir = 'outputs_100'
+    prompts = json.load(open('prompts_full.json'))
+    output_dir = 'outputs_full'
     os.makedirs(output_dir, exist_ok=True)
     print("number of prompts: {}".format(len(prompts)))
     print('Parent process %s.' % os.getpid())

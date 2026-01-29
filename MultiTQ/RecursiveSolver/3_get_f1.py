@@ -81,7 +81,7 @@ def normalize_prediction(prediction):
 q2a = []
 q2a_trees = []
 
-trees = json.load(open("../results/llama27bfine100.json", "r"))
+trees = json.load(open("../results/test_full.json", "r"))
 
 acc_list = []
 hit_list = []

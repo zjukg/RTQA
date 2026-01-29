@@ -7,7 +7,7 @@ instruction_equal_multi = '\n'.join([_.strip() for _ in open('./prompt/equal_mul
 instruction_equal = '\n'.join([_.strip() for _ in open('./prompt/equal.txt').readlines()])
 instruction_first_last = '\n'.join([_.strip() for _ in open('./prompt/first_last.txt').readlines()])
 
-question_path = "../../datasets/MultiTQ/questions/test_100.json"
+question_path = "../../datasets/MultiTQ/questions/test.json"
 #raw_data = jsonlines.open("../../datasets/MultiTQ/questions/test_500.json", "r")
 with open(question_path, 'r') as file:
     question_json = json.load(file)
@@ -39,6 +39,6 @@ for q in question_json:
     prompt = instruction + '\nQ: ' + question + '\nA: '
     prompts.append(prompt)
 """
-json.dump(prompts, open('prompts_100.json', 'w'), indent = 2)
+json.dump(prompts, open('prompts_full.json', 'w'), indent = 2)
 print(len(prompts))
 print(len(question_json))

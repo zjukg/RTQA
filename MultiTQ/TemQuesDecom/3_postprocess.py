@@ -3,7 +3,7 @@ from tqdm import tqdm
 from termcolor import colored
 import os
 
-raw_data = json.load(open('outputs_100/predictions_100.json'))
+raw_data = json.load(open('outputs_full/predictions.json'))
 total_items = len(raw_data)
 processed_items = 0
 error_items = 0
@@ -36,7 +36,7 @@ for item in tqdm(raw_data):
     
     
     data[question] = qds
-json.dump(data, open('question_decompositions_100.json', 'w'), indent = 2)
+json.dump(data, open('question_decompositions_full.json', 'w'), indent = 2)
 # 打印统计信息
 print(f"总条目数: {total_items}")
 print(f"处理的问题数: {processed_items}")

@@ -74,7 +74,7 @@ async def main():
     global semaphore
     # Initialize the semaphore within the main event loop
     semaphore = asyncio.Semaphore(20)
-    trees = json.load(open("trees_test4.json", "r"))
+    trees = json.load(open("trees.json", "r"))
     print("Total:", len(trees), "| Start Processing...")
     retrievers = []
     for id in range(1):
@@ -93,7 +93,7 @@ async def main():
         results.append(result)
     # 保存结果
     os.makedirs("../results", exist_ok=True)
-    with open("../results/test_xronlyLLMv3.json", "w") as f:
+    with open("../results/test_full.json", "w") as f:
         json.dump(results, f, indent=2)    
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 import json
 
-raw_data = json.load(open('question_decompositions_100.json'))
+raw_data = json.load(open('question_decompositions_full.json'))
 
 def check(question):
     if '#1' in question or '#2' in question or '#3' in question or '#4' in question:
@@ -39,6 +39,6 @@ for father in tree:
             else:
                 print('haha')
 
-json.dump(question_decompositions, open('tree_100.json', 'w'), indent = 2)
+json.dump(question_decompositions, open('tree_full.json', 'w'), indent = 2)
 
 print(len(tree))

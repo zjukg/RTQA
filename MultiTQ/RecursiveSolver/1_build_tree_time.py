@@ -8,11 +8,11 @@ import os
 import re
 from dateutil import parser
 
-question_path = "../../datasets/MultiTQ/questions/test_100.json"
+question_path = "../../datasets/MultiTQ/questions/test.json"
 with open(question_path, 'r') as file:
     raw_data = json.load(file)
 #raw_data = [json.loads(line.strip()) for line in open('../../../released_data/2wikimultihopqa__v2_test_random_500.jsonl')]
-q2sub_q = json.load(open("../TemQuesDecom/tree_100.json"))
+q2sub_q = json.load(open("../TemQuesDecom/tree_full.json"))
 
 trees = []
 
@@ -112,7 +112,7 @@ for item in raw_data:
     tree[root_idx]["qtype"] = item["qtype"]
     trees.append(tree)
 
-json.dump(trees, open("trees_100.json", "w"), indent=2)
+json.dump(trees, open("trees.json", "w"), indent=2)
     
     
 

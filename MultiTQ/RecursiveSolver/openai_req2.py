@@ -60,7 +60,7 @@ class AsyncOpenaiReq:
         return [response_dict], True
 
 
-    async def req2openai(self, prompt, model="gpt-4o-mini", temperature=0.0, max_tokens=1024, stop=None, logprobs=True, use_cache=False):
+    async def req2openai(self, prompt, model="deepseek-v3-250324", temperature=0.0, max_tokens=1024, stop=None, logprobs=True, use_cache=False):
         assert isinstance(prompt, str)
         input_key = (prompt, model, max_tokens, stop, logprobs)
         if use_cache and temperature == 0 and input_key in self.cache:
